@@ -1,0 +1,58 @@
+{
+ "formulae": [],
+ "casks": [
+  {
+   "token": "firefox",
+   "full_token": "firefox",
+   "old_tokens": [],
+   "tap": "homebrew/cask",
+   "name": [
+    "Mozilla Firefox"
+   ],
+   "desc": "Web browser",
+   "homepage": "https://www.mozilla.org/firefox/",
+   "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0.1/mac/en-US/Firefox%20157.0.1.dmg",
+   "version": "157.0.1",
+   "autobump": true,
+   "no_autobump_message": null,
+   "skip_livecheck": false,
+   "installed": null,
+   "installed_time": null,
+   "bundle_version": null,
+   "bundle_short_version": null,
+   "pinned": false,
+   "pinned_version": null,
+   "outdated": false,
+   "sha256": "40a0a649120635460256dae9ad63e40377f77326cbc9c449a5d0a1d7f5dd7982",
+   "caveats": null,
+   "caveats_rosetta": null,
+   "depends_on": {
+    "macos": {}
+   },
+   "conflicts_with": {
+    "cask": [
+     "firefox@beta",
+     "firefox@cn",
+     "firefox@esr"
+    ]
+   },
+   "container": null,
+   "rename": [],
+   "auto_updates": true,
+   "deprecated": false,
+   "deprecation_date": null,
+   "deprecation_reason": null,
+   "deprecation_replacement_formula": null,
+   "deprecation_replacement_cask": null,
+   "deprecate_args": null,
+   "disabled": false,
+   "disable_date": null,
+   "disable_reason": null,
+   "disable_replacement_formula": null,
+   "disable_replacement_cask": null,
+   "disable_args": null,
+   "tap_git_head": "086dfbab8a72cd87eab20a8ff7e974db70051883",
+   "ruby_source_path": "Casks/f/firefox.rb"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "formulae": [
+  {
+   "name": "jq",
+   "full_name": "jq",
+   "tap": "homebrew/core",
+   "oldnames": [],
+   "aliases": [],
+   "versioned_formulae": [],
+   "desc": "Lightweight and flexible command-line JSON processor",
+   "license": "MIT",
+   "homepage": "https://jqlang.github.io/jq/",
+   "versions": {
+    "stable": "1.8.2",
+    "head": "HEAD",
+    "bottle": true
+   },
+   "patches": [],
+   "revision": 0,
+   "version_scheme": 0,
+   "compatibility_version": null,
+   "autobump": true,
+   "no_autobump_message": null,
+   "skip_livecheck": false,
+   "pour_bottle_only_if": null,
+   "keg_only": false,
+   "keg_only_reason": null,
+   "options": [],
+   "build_dependencies": [],
+   "dependencies": [
+    "oniguruma"
+   ],
+   "test_dependencies": [],
+   "recommended_dependencies": [],
+   "optional_dependencies": [],
+   "uses_from_macos": [],
+   "uses_from_macos_bounds": [],
+   "conflicts_with": [],
+   "conflicts_with_reasons": [],
+   "link_overwrite": [],
+   "caveats": null,
+   "installed": [],
+   "linked_keg": null,
+   "pinned": false,
+   "outdated": false,
+   "deprecated": false,
+   "deprecation_date": null,
+   "deprecation_reason": null,
+   "deprecation_replacement_formula": null,
+   "deprecation_replacement_cask": null,
+   "deprecate_args": null,
+   "disabled": false,
+   "disable_date": null,
+   "disable_reason": null,
+   "disable_replacement_formula": null,
+   "disable_replacement_cask": null,
+   "disable_args": null,
+   "post_install_steps": [],
+   "post_install_defined": false,
+   "service": null,
+   "tap_git_head": "3c09418e50ad51f7f241f4062ffcd7bffe36e3ce",
+   "ruby_source_path": "Formula/j/jq.rb",
+   "head_dependencies": {
+    "build_dependencies": [
+     "autoconf",
+     "automake",
+     "libtool"
+    ],
+    "dependencies": [
+     "oniguruma"
+    ],
+    "test_dependencies": [],
+    "recommended_dependencies": [],
+    "optional_dependencies": [],
+    "uses_from_macos": [],
+    "uses_from_macos_bounds": []
+   }
+  }
+ ],
+ "casks": []
+}

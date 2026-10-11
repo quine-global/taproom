@@ -1,0 +1,82 @@
+# https://taskfile.dev — run `task` to list tasks.
+version: '3'
+
+vars:
+  APP: build/macos/Build/Products/Release/taproom.app
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - task --list
+
+  deps:
+    desc: Fetch Dart/Flutter packages
+    sources: [pubspec.yaml, pubspec.lock]
+    cmds:
+      - flutter pub get
+
+  run:
+    desc: Run the app in debug mode (needs full Xcode)
+    deps: [deps]
+    cmds:
+      - flutter run -d macos
+
+  test:
+    desc: Run all tests (includes read-only checks against your real brew)
+    deps: [deps]
+    cmds:
+      - flutter test {{.CLI_ARGS}}
+
+  analyze:
+    desc: Static analysis
+    deps: [deps]
+    cmds:
+      - flutter analyze
+
+  fmt:
+    desc: Format all Dart code
+    cmds:
+      - dart format lib test
+
+  fmt:check:
+    desc: Fail if any Dart code is unformatted
+    cmds:
+      - dart format --output=none --set-exit-if-changed lib test
+
+  check:
+    desc: Formatting, analysis and tests — run before committing
+    cmds:
+      - task: fmt:check
+      - task: analyze
+      - task: test
+
+  build:
+    desc: Build the release .app (needs full Xcode)
+    deps: [deps]
+    cmds:
+      - flutter build macos --release
+      - echo "Built {{.APP}}"
+
+  open:
+    desc: Launch the release build
+    deps: [build]
+    cmds:
+      - open "{{.APP}}"
+
+  install:
+    desc: Copy the release build to /Applications
+    deps: [build]
+    cmds:
+      - rm -rf /Applications/Taproom.app
+      - cp -R "{{.APP}}" /Applications/Taproom.app
+
+  doctor:
+    desc: Check the Flutter/Xcode toolchain
+    cmds:
+      - flutter doctor
+
+  clean:
+    desc: Remove build outputs
+    cmds:
+      - flutter clean
